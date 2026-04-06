@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRE DSCR Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <h1>Commercial Lending & DSCR Calculator</h1>
+    </header>
+    <div class="page">
+        <div id="input-section">
+            <h2>Input Parameters</h2>
+            <label for="principal">Principal:</label>
+            <input type="number" id="principal" placeholder="Enter Principal">
+            <label for="interest-rate">Interest Rate (%):</label>
+            <input type="number" id="interest-rate" placeholder="Enter Interest Rate">
+            <label for="amortization">Amortization Period (years):</label>
+            <input type="number" id="amortization" placeholder="Enter Amortization Period">
+            <label for="net-operating-income">Net Operating Income (NOI):</label>
+            <input type="number" id="net-operating-income" placeholder="Enter NOI">
+            <label for="interest-only">Interest-Only Payment</label>
+            <select id="interest-only">
+                <option value="false">No</option>
+                <option value="true">Yes</option>
+            </select>
+        </div>
+        <div id="output-section">
+            <h2>Results</h2>
+            <div class="output-grid">
+                <div class="output-card">
+                    <div class="output-label">Monthly Payment</div>
+                    <div class="output-value" id="monthly-payment">--</div>
+                </div>
+                <div class="output-card">
+                    <div class="output-label">Annual Debt Service</div>
+                    <div class="output-value" id="annual-debt-service">--</div>
+                </div>
+                <div class="output-card">
+                    <div class="output-label">DSCR</div>
+                    <div class="output-value" id="dscr">--</div>
+                </div>
+                <div class="output-card">
+                    <div class="output-label">Loan Constant</div>
+                    <div class="output-value" id="loan-constant">--</div>
+                </div>
+            </div>
+            <div class="max-loan-section">
+                <div class="max-loan-title">Max Loan Sizing</div>
+                <div class="max-loan-row">
+                    <span class="max-loan-label">At <span class="dscr">1.0x</span> DSCR</span>
+                    <span class="max-loan-value" id="max-loan-1">--</span>
+                </div>
+                <div class="max-loan-row">
+                    <span class="max-loan-label">At <span class="dscr">1.20x</span> DSCR</span>
+                    <span class="max-loan-value" id="max-loan-1-20">--</span>
+                </div>
+                <div class="max-loan-row">
+                    <span class="max-loan-label">At <span class="dscr">1.25x</span> DSCR</span>
+                    <span class="max-loan-value" id="max-loan-1-25">--</span>
+                </div>
+                <div class="max-loan-row">
+                    <span class="max-loan-label">At <span class="dscr">1.30x</span> DSCR</span>
+                    <span class="max-loan-value" id="max-loan-1-30">--</span>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+    <script src="calc.js"></script>
+</body>
+    
+</html>
